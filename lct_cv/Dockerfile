@@ -9,9 +9,8 @@ ENV PYTHONDONTWRITEBYTECODE 1
 ENV PYTHONUNBUFFERED 1
 
 # устанавливаем зависимости
+RUN apt-get update && apt-get install ffmpeg libsm6 libxext6  -y
 RUN pip install --upgrade pip
-# RUN apt-get add --update --no-cache --virtual .tmp-build-deps \
-#       gcc g++ cmake libc-dev linux-headers libblas liblapack-dev gfortran libatlas-base-dev
 COPY ./requirements.txt .
 RUN pip install -r requirements.txt
 
