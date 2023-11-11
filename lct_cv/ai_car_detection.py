@@ -14,7 +14,7 @@ MQ_HOST = os.environ.get('RABBITMQ_HOST')
 CV_PATH = os.environ.get('CV_PATH')
  
 credentials = pika.PlainCredentials(MQ_LOGIN, MQ_PASSWORD)
-parameters = pika.ConnectionParameters(MQ_IP, int(MQ_PORT), MQ_HOST, credentials)
+parameters = pika.ConnectionParameters(MQ_IP, MQ_PORT, MQ_HOST, credentials)
 # credentials = pika.PlainCredentials('test_user', 'test')
 # parameters = pika.ConnectionParameters('localhost', 5672, 'test_host', credentials)
 
