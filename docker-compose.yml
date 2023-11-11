@@ -5,7 +5,7 @@ services:
     # Берем Dockerfile из каталога app
     build: ./lct_cv
     # Запускаем тестовый сервер
-    command: python ai_car_detection.py
+    command: python ai_detection.py
     # куда будут помещены данные из каталога app
     volumes:
       - ./lct_cv/:/usr/src/lct_cv/
